@@ -113,7 +113,7 @@ function sendGenericMessage(sender) {
 		}
 	}
 	
-	let messageData = {
+	let messageData1 = {
 			"attachment": {
 				"type": "template",
 				"payload": {
@@ -126,9 +126,9 @@ function sendGenericMessage(sender) {
 						}, {
 							"type": "postback",
 							"title": "Postback",
-							"payload": "Payload for first element in a generic bubble",
-						}],
-					},
+							"payload": "Payload for first element in a generic bubble"
+						}]
+					}
 				}
 			
 		}
