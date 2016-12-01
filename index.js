@@ -114,7 +114,7 @@ function sendGenericMessage(sender) {
 	}
 	 
 	
-	let messageData= {
+	let messageData1= {
 			"attachment":{
 			      "type":"template",
 			      "payload":{
