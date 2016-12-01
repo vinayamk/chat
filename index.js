@@ -99,7 +99,7 @@ function sendGenericMessage(sender) {
 					              }
 					        ],
 					        
-					"buttons": [{
+					"buttons1": [{
 						"type": "web_url",
 						"url": "https://www.messenger.com",
 						"title": "web url"
