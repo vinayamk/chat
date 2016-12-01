@@ -113,25 +113,7 @@ function sendGenericMessage(sender) {
 		}
 	}
 	
-	let messageData1 = {
-			"attachment": {
-				"type": "template",
-				"payload": {
-					"template_type": "button",
-					  "text":"What do you want to do next?",
-						"buttons": [{
-							"type": "web_url",
-							"url": "https://www.messenger.com",
-							"title": "web url"
-						}, {
-							"type": "postback",
-							"title": "Postback",
-							"payload": "Payload for first element in a generic bubble"
-						}]
-					}
-				}
-			
-		}
+	
 	request({
 		url: 'https://graph.facebook.com/v2.6/me/messages',
 		qs: {access_token:token},
