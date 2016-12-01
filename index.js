@@ -6,7 +6,7 @@ const request = require('request')
 const app = express()
 
 app.set('port', (process.env.PORT || 5000))
-
+app.use(express.static(require('path').join(__dirname, 'views')));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
 
@@ -17,6 +17,12 @@ app.use(bodyParser.json())
 app.get('/', function (req, res) {
 	res.send('hello world i am a secret bot')
 })
+
+app.get('/menu', function (req, res) {
+	res.sendFile(__dirname + '/views/menu.html')
+})
+
+
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
@@ -84,6 +90,15 @@ function sendGenericMessage(sender) {
 					"title": "First card",
 					"subtitle": "Element #1 of an hscroll",
 					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+					 "buttons":[
+					              {
+					                "type":"web_url",
+					                "url":"https://petersfancyapparel.com/criteria_selector",
+					                "title":"Select Criteria",
+					                "webview_height_ratio": "compact"
+					              }
+					        ],
+					        
 					"buttons": [{
 						"type": "web_url",
 						"url": "https://www.messenger.com",
